@@ -6,16 +6,11 @@ steps:
   inputs:
     script: 'make init-reaction'
     failOnStderr: false
-
-- task: CmdLine@2
-  inputs:
-    script: 'make init-reaction'
-    failOnStderr: false
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'Pay-as-you-go(8af35f31-54b7-4fa6-ab2c-536cffddddf4)'
     azureContainerRegistry: '{"loginServer":"outfitcontainerregistry.azurecr.io", "id" : "/subscriptions/8af35f31-54b7-4fa6-ab2c-536cffddddf4/resourceGroups/outfit/providers/Microsoft.ContainerRegistry/registries/outfitcontainerregistry"}'
     dockerComposeFile: 'reaction/docker-compose.yml'
-    action: 'Push services'
+    action: 'Build services'
     includeLatestTag: true
