@@ -4,7 +4,12 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'make'
+    script: 'make init-reaction'
+    failOnStderr: false
+
+- task: CmdLine@2
+  inputs:
+    script: 'make init-reaction'
     failOnStderr: false
 - task: DockerCompose@0
   inputs:
