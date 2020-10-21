@@ -5,7 +5,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'make'
-    failOnStderr: true
+    failOnStderr: false
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Azure Container Registry'
