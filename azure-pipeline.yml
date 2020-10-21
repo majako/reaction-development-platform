@@ -2,6 +2,10 @@ pool:
     vmImage: 'ubuntu-latest'
   
   steps:
+  - task: CmdLine@2
+    inputs:
+      script: 'make'
+      failOnStderr: true
   - task: DockerCompose@0
     inputs:
       containerregistrytype: 'Azure Container Registry'
