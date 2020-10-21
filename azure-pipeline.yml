@@ -11,6 +11,6 @@ steps:
     containerregistrytype: 'Azure Container Registry'
     azureSubscription: 'Pay-as-you-go(8af35f31-54b7-4fa6-ab2c-536cffddddf4)'
     azureContainerRegistry: '{"loginServer":"outfitcontainerregistry.azurecr.io", "id" : "/subscriptions/8af35f31-54b7-4fa6-ab2c-536cffddddf4/resourceGroups/outfit/providers/Microsoft.ContainerRegistry/registries/outfitcontainerregistry"}'
-    dockerComposeFile: '**/docker-compose.yml'
+    dockerComposeFile: 'reaction/docker-compose.yml'
     action: 'Push services'
     includeLatestTag: true
